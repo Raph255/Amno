@@ -1,0 +1,11 @@
+class Categories {
+    final String nom;
+
+    const Dog({
+        required this.nom,
+    })
+}
+
+class Fichier {
+    final String nom;
+}
