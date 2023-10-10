@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
 
-/// This class is used to display a button that will open the PDF file
 class PDFApp extends StatelessWidget {
   const PDFApp({super.key});
   @override
