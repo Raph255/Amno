@@ -31,7 +31,7 @@ class PDFXApp extends StatelessWidget {
                   onClicked: () async {
                     const path = 'assets/bail.pdf';
                     final file = await PDFApi.loadAsset(path);
-                    openPDF(context,file);
+                    PDFApi.openPDF(context,file);
                   },
                 )
               ],
@@ -43,9 +43,9 @@ class PDFXApp extends StatelessWidget {
       );
     
   }
-    void openPDF(BuildContext context, File file) => Navigator.of(context).push(
-    MaterialPageRoute(builder: (context)=> PDFViewer(file : file))
-  );
+  //   void openPDF(BuildContext context, File file) => Navigator.of(context).push(
+  //   MaterialPageRoute(builder: (context)=> PDFViewer(file : file))
+  // );
 }
 
 

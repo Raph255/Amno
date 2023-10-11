@@ -16,6 +16,8 @@ class _HomePageState extends State<HomePage> {
 
   int _currentIndex = 0;
 
+  /// Permet de mettre à jour l'index de la page courante
+  /// même si l'utilisateur fait glisser la page
   @override
   void initState() {
     super.initState();
@@ -29,10 +31,11 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-
+  /// Eviter erreurs d'état du controleur
+  /// et les fuites de mémoire
   @override
   void dispose() {
-    // TODO: implement dispose
+    _pageController.dispose();
     super.dispose();
   }
 
@@ -63,9 +66,9 @@ class _HomePageState extends State<HomePage> {
             ) ,
             body: PageView(
               controller: _pageController,
-              children: const [
+              children: [
                 HomeView(),
-                FavoritesView(),
+                const FavoritesView(),
               ],
               ),
             bottomNavigationBar: BottomNavigationBar(
