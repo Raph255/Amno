@@ -4,6 +4,10 @@ import 'package:flutter/services.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 
+/// Cette classe API permet de charger un fichier PDF à partir du chemin
+/// pour celle, elle implémente deux méthodes :
+/// - loadAsset : permet de charger les octets d'un fichier à partir du chemin   
+/// - _storeFile : permet de stocker les octets du fichier dans un objet File
 class PDFApi {
   static Future<File> loadAsset(String path) async {
     final data = await rootBundle.load(path);
