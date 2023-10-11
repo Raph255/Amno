@@ -1,9 +1,12 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
-import 'package:pdfx/pdfx.dart';
 
 import 'package:amno/widget/button_widget.dart';
 import 'package:amno/api/pdf_api.dart';
 import 'package:amno/views/pdf_viewer.dart';
+import 'package:flutter_pdfview/flutter_pdfview.dart';
+import 'package:path/path.dart';
 
 
 
@@ -26,7 +29,7 @@ class PDFXApp extends StatelessWidget {
                 ButtonWidget(
                   text: 'Asset PDF',
                   onClicked: () async {
-                    const path = 'assets/test.pdf';
+                    const path = 'assets/bail.pdf';
                     final file = await PDFApi.loadAsset(path);
                     openPDF(context,file);
                   },
@@ -40,17 +43,11 @@ class PDFXApp extends StatelessWidget {
       );
     
   }
-  
+    void openPDF(BuildContext context, File file) => Navigator.of(context).push(
+    MaterialPageRoute(builder: (context)=> PDFViewer(file : file))
+  );
 }
 
-final pdfController = PdfController(
-  document: PdfDocument.openAsset('assets/test.pdf'),
-);
 
-// Simple Pdf view with one render of page (loose quality on zoom)
-
-Widget pdfView() => PdfView(
-  controller: pdfController,
-);
 
 
