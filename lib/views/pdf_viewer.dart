@@ -4,7 +4,7 @@ import 'package:path/path.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
 import 'dart:io';
 
-/// Cette classe construit une page qui affiche le fichier PDF
+/// Cette classe construit un affichage d'un fichier PDF
 /// Elle prend en paramètre le fichier PDF à afficher
 /// Cette page est appelée par la fonction openPDF
 class PDFViewerPage extends StatefulWidget{

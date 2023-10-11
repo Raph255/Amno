@@ -3,7 +3,7 @@ import 'package:pdfx/pdfx.dart';
 
 import 'package:amno/widget/button_widget.dart';
 import 'package:amno/api/pdf_api.dart';
-import 'package:amno/pages/pdf_viewer.dart';
+import 'package:amno/views/pdf_viewer.dart';
 
 
 
@@ -33,17 +33,6 @@ class PDFXApp extends StatelessWidget {
                 )
               ],
               )
-          // child : ElevatedButton(
-          //    onPressed: () {
-          //     Navigator.push(
-          //       context,
-          //       MaterialPageRoute(
-          //         builder: (context) => PdfView(controller: pdfController),
-          //       ),
-          //     );
-          //   },
-          //   child: const Text('View PDF'),
-          //   )
               )
 
         ),
