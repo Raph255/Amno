@@ -27,7 +27,7 @@ class _PDFViewerPageState extends State<PDFViewer>{
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(name),
+        title: Text(widget.file.path),
       ),
       body: PDFView(
         filePath: widget.file.path,
